@@ -1,0 +1,411 @@
+/* jeg starter med at nulstille mit css dokumnet, i forhold til evt. browser indstilliner */
+
+/* jeg starter med at style til mobil enhed, der er stående position */
+/* min  minimum witdh er 320 px  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff5e9;
+    font-size: 12px;
+}
+
+/* jeg styler mine links der er i navbaren */
+
+ a { 
+    color: #000;
+}
+
+/* jeg styler min header */
+
+.header {
+    background-color: #fff5e9;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+/* jeg styler mine ul i min header */
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff5e9;
+}
+
+/* jeg styler mine a tags i min header  */
+
+.header ul a {
+    display: block;
+    outline: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* jeg styler mine a tags, når musen holdes over dem */
+
+.header ul a:hover {
+    background-color: #99b07e;
+}
+
+/* jeg styler mit logo */
+
+.header .logo img {
+    float: left;
+    display: block;
+    width: 15em;
+    padding: 10px 20px;
+}
+
+/* jeg styler min navbar på mobilen */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+/* jeg bygger nu min hamburger-menu */
+
+.header .menu-icon .nav-icon {
+    background: black;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* jeg vil nu animere min checked menu knap og min navbar */
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 600px;
+}
+
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 5px;
+    
+}
+/* jeg skujler mine submenuer*/
+
+
+.header .submenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #99b07e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .submenu li a:hover {
+   background-color: #708359;
+}
+
+/* Styling for undermenu punkter */
+.header .submenu li {
+    float: none; /* For at undgå, at de flugter vandret med de primære menu punkter */
+    margin-top: 0.5rem;
+}
+
+/* Viser undermenuer, når det tilsvarende primære menu punkt er i hover-tilstand */
+.header .menu > li:hover .submenu {
+    display: block;
+}
+
+
+/* jeg styler nu mit indhold til siden i min main */
+
+main {
+    background-color: #fff5e9;
+    color: #000;
+    padding-top:7rem;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    text-decoration: underline;
+    font-size: 16px;
+    background-color: #8a476b;
+    padding-top:2rem;
+    color: antiquewhite;
+}
+
+.overste-tekst {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    
+}
+
+.overste-tekst p {
+    font-size: 12px;
+    width: 15rem;
+}
+
+.julebanko {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    background-color: #8a476b;
+    color: #fff5e9;
+    width: 100%;
+}
+
+
+.billede-julebanko img {
+    width: 15rem;
+}
+
+.tekst-julebanko {
+    width: 20rem;
+    
+}
+
+.tekst-julebanko p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.banko-aften {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banko-aften img {
+    width: 15rem;
+    margin: 1rem 0;
+}
+
+
+/* jeg styler nu min footer */
+
+footer {
+    background-color: #44447a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer img {
+    width: 15rem;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    color: #fff5e9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #fff5e9;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff5e9;
+}
+
+/* jeg ændre min a tags ved hover */
+
+footer a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+.socialemedier {
+    margin-bottom: 2rem;
+}
+
+
+
+/* jeg styler nu til tablet størrelse, i liggende position */
+
+@media (min-width:768px) {
+
+.overste-tekst p {
+    width: 20rem;
+}
+
+.billede-julebanko img {
+    width: 15rem;
+}
+
+
+}
+
+
+
+/* jeg styler nu min css til en lille computer */
+
+@media (min-width:1024px) {
+
+/* jeg styler min navbar,så den passser til min computerskærm */
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    padding: 20px 30px;
+    margin-top: 1rem;
+    outline: none;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.menu-icon {
+    display: none;
+}
+/* jeg placere mere af indholdet ved siden af hinanden */
+
+.overste-tekst p {
+    width: 30rem;
+    font-size: 16px;
+}
+
+.julebanko {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.julebanko img {
+    margin-left: 8rem;
+}
+
+.tekst-julebanko {
+    margin-right: 5rem;
+}
+
+
+ /* jeg styler nu min footer så den passer til en computerskærm */
+
+
+ .footer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+.aabningstider, .kontakt, .socialemedier {
+    flex: 1;
+    margin: 2rem;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+ .footer p, .footer a {
+font-size: 12px; }
+
+}
+
+
+/* jeg styler nu til en stor computerskærm */
+
+@media (min-width:1440px)  {
+
+    .overste-tekst p {
+        font-size: 16px;
+        width: 40rem;
+    }
+
+ h1 {
+    font-size: 16px;
+ }
+
+.julebanko img {
+    width: 25rem;
+    margin-left: 15rem;
+}
+.tekst-julebanko {
+    margin-right: 15rem;
+}
+
+.tekst-julebanko p {
+    font-size: 14px;
+}
+
+.banko-aften img {
+    width: 20rem;
+}
+
+
+}
+
+

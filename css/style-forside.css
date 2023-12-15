@@ -1,0 +1,750 @@
+/* jeg starter med at nulstille mit css dokumnet, i forhold til evt. browser indstilliner */
+
+/* jeg starter med at style til mobil enhed, der er stående position */
+/* min  minimum witdh er 320 px  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff5e9;
+    font-size: 12px;
+}
+
+/* jeg styler mine links der er i navbaren */
+
+ a { 
+    color: #000;
+}
+
+/* jeg styler min header */
+
+.header {
+    background-color: #fff5e9;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+/* jeg styler mine ul i min header */
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff5e9;
+}
+
+/* jeg styler mine a tags i min header  */
+
+.header ul a {
+    display: block;
+    outline: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* jeg styler mine a tags, når musen holdes over dem */
+
+.header ul a:hover {
+    background-color: #99b07e;
+}
+
+/* jeg styler mit logo */
+
+.header .logo img {
+    float: left;
+    display: block;
+    width: 15em;
+    padding: 10px 20px;
+}
+
+/* jeg styler min navbar på mobilen */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+/* jeg bygger nu min hamburger-menu */
+
+.header .menu-icon .nav-icon {
+    background: black;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* jeg vil nu animere min checked menu knap og min navbar */
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 600px;
+}
+
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 5px;
+    
+}
+/* jeg skujler mine submenuer*/
+
+
+.header .submenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #99b07e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .submenu li a:hover {
+   background-color: #708359;
+}
+
+/* Styling for undermenu punkter */
+.header .submenu li {
+    float: none; /* For at undgå, at de flugter vandret med de primære menu punkter */
+    margin-top: 0.5rem;
+}
+
+/* Viser undermenuer, når det tilsvarende primære menu punkt er i hover-tilstand */
+.header .menu > li:hover .submenu {
+    display: block;
+}
+
+
+
+/* jeg styler nu mit indhold til siden i min main */
+
+main {
+    background-color: #fff5e9;
+    color: #000;
+    padding-top:7rem;
+    
+}
+
+.overste-tekst {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    
+}
+
+.overste-tekst p {
+    font-size: 14px;
+    width: 20rem;
+}
+
+/* jeg styler nu det første afsnit om vores udvalg */
+
+.teaser-udvalg {
+    background-color: #44447a;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+}
+
+.tekst-udvalg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+
+h1 {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.teaser-udvalg img{
+    width: 20rem;
+    margin: 1rem;
+    
+}
+
+.teaser-udvalg p {
+    margin-bottom: 1rem;
+    font-size: 12px;
+}
+
+.teaser-udvalg a {
+    color: #fff5e9;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+
+.teaser-udvalg a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+/* jeg styler nu andet afsnit på min forside */
+
+.teaser-historie {
+    background-color: #44447a;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 2rem;
+    
+}
+
+.tekst-historie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15rem;
+}
+
+.teaser-historie img{
+    width: 20rem;
+    padding: 1rem;
+}
+
+.teaser-historie p {
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+
+.teaser-historie a {
+    color: #fff5e9;
+    text-decoration: none;
+}
+
+.teaser-historie a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+.billede-historie2 {
+    display: none;
+}
+/* jeg styler nu mit andet afsnit om arrangementer  */
+
+.teaser-olsmagning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.teaser-olsmagning img{
+    width: 15rem;
+    padding: 1rem;
+    
+}
+
+.teaser-olsmagning p {
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.teaser-olsmagning h1 {
+    color: #000;
+    margin-bottom: 0;
+}
+
+
+.teaser-olsmagning h1:hover {
+    background-color: #44447a;
+    color: #fff5e9;
+}
+
+.teaser-rundvisning {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.teaser-rundvisning img{
+    width: 15rem;
+    padding: 1rem;
+}
+
+.teaser-rundvisning p {
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.teaser-rundvisning h1 {
+    color: #000;
+    margin-bottom: 0;
+}
+
+
+.teaser-rundvisning h1:hover {
+    background-color: #44447a;
+    color: #fff5e9;
+}
+
+
+/* jeg styler nu mit juleudvalg-sektion */
+
+.teaser-jul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #8a476b;
+    color: antiquewhite;
+}
+
+.tekst-jul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+}
+
+.teaser-jul img{
+    width: 20rem;
+    padding: 1rem;
+}
+
+.teaser-jul p {
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.teaser-jul a {
+    color: #fff5e9;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+
+.teaser-jul a:hover {
+    background-color: #fff5e9;
+    color: #8a476b;
+}
+
+.teaser-jul h1 {
+    margin-bottom: 0;
+}
+
+/* jeg styler nu min sektion med Community */
+
+.teaser-community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+   
+}
+
+.teaser-community img{
+    width: 20rem;
+    padding: 1rem;
+    margin-bottom: 3rem;
+}
+
+.teaser-community p {
+    width: 60%;
+    margin-bottom: 1rem;
+    
+}
+
+.teaser-community h1 {
+    color: #000;
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
+.teaser-community  h1:hover {
+    background-color: black;
+    color: #fff5e9;
+}
+
+.teaser-community a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: 1rem;
+}
+
+.teaser-community  a:hover {
+    background-color: black;
+    color: #fff5e9;
+}
+
+
+
+/* jeg styler nu min footer */
+
+footer {
+    background-color: #44447a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer img {
+    width: 15rem;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    color: #fff5e9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #fff5e9;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff5e9;
+}
+
+/* jeg ændre min a tags ved hover */
+
+footer a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+.socialemedier {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+/* jeg styler nu til tablet størrelse, i liggende position */
+
+@media (min-width:768px) {
+
+    .overste-tekst {
+        font-size: 14px;
+    }
+
+    .overste-tekst p {
+        width: 60%;
+    }
+
+    .teaser-udvalg p, .teaser-historie p {
+        width: 80%;
+    }
+
+    .teaser-historie a {
+        width: 80%;
+    }
+
+    .teaser-jul p {
+        width: 70%;
+    }
+
+    .teaser-community p {
+        width: 40%;
+    }
+
+
+   /* jeg styler nu min anden sektion, så arrangemneterne bliver placeret
+   ved siden af hinanden */
+
+   .forside-arrangementer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  
+   }
+   
+   .teaser-olsmagning img {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    .teaser-rundvisning img {
+        height: 20rem;
+        width: 15rem;
+    }
+
+}
+
+
+
+/* jeg styler nu min css til en lille computer */
+
+@media (min-width:1024px) {
+
+/* jeg styler min navbar,så den passser til min computerskærm */
+
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+        margin-top: 1rem;
+        outline: none;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .menu-icon {
+        display: none;
+    }
+    /* jeg placere mere af indholdet ved siden af hinanden */
+
+    .overste-tekst p {
+        width: 50%;
+    }
+
+    .teaser-udvalg {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .teaser-udvalg img {
+        width: 25rem;
+        margin: 2rem;
+        
+    }
+
+    .teaser-udvalg {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .teaser-historie {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+
+
+    .teaser-historie img {
+        width: 20rem;
+        padding: 0;
+        padding-top: 2rem;
+        padding-right: 3rem;
+        margin-left: 4rem;
+        
+    }
+
+    .billede-historie1 {
+        display: none;
+    }
+
+    .billede-historie2 {
+        display: flex;
+    }
+
+    .forside-arrangementer {
+        padding-left: 10rem;
+        padding-right: 10rem;
+    }
+
+    .teaser-rundvisning p {
+        width: 40%;
+    }
+
+    .teaser-olsmagning p {
+        width: 40%;
+        }
+
+
+    .teaser-jul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        
+    }    
+
+    .teaser-jul img {
+        width: 20rem;
+        margin-left: 10rem;
+    }
+
+    .teaser-community p {
+        width: 30%;
+        font-size: 12px;
+        text-align: center;
+       
+    }
+       
+
+    /* jeg styler nu min footer så den passer til en computerskærm */
+
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+    }
+
+
+    .aabningstider, .kontakt, .socialemedier {
+        flex: 1;
+        margin: 2rem;
+    }
+
+    footer h2 {
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+
+     .footer p, .footer a {
+    font-size: 12px; }
+
+  
+}
+
+
+/* jeg styler nu til en stor computerskærm */
+
+@media (min-width:1440px) 
+
+{
+    .overste-tekst p {
+        font-size: 16px;
+        width: 50%;
+    }
+
+    .teaser-udvalg p, .teaser-udvalg a {
+        font-size: 14px;
+        width: 90%;
+        margin-right: 5rem;
+    }
+
+    .teaser-udvalg img {
+        width: 30rem;
+        margin-right: 10rem;
+    }
+
+    .teaser-historie p {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .teaser-historie img {
+        width: 30rem;
+        margin-left: 10rem;
+    }
+
+    .teaser-jul {
+        font-size: 18px;
+    }
+
+    .teaser-community {
+        font-size: 18px;
+    }
+
+    .teaser-olsmagning img {
+        width: 15rem;
+        height: auto;
+    }
+
+    .teaser-rundvisning img {
+        width: 15rem;
+        height: auto;
+    }
+
+    .teaser-olsmagning p {
+        font-size: 14px;
+    }
+
+    .teaser-rundvisning {
+        font-size: 14px;
+    }
+
+    .teaser-jul img {
+        width: 30rem;
+    }
+
+    .teaser-jul p, .teaser-jul a {
+        font-size: 14px;
+    }
+
+    .teaser-community p {
+        width: 20rem;
+    }
+
+    .lobe-link {
+        font-size: 12px;
+    }
+
+}

@@ -1,0 +1,471 @@
+/* jeg starter med at nulstille mit css dokumnet, i forhold til evt. browser indstilliner */
+
+/* jeg starter med at style til mobil enhed, der er stående position */
+/* min  minimum witdh er 320 px  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff5e9;
+    font-size: 12px;
+}
+
+/* jeg styler mine links der er i navbaren */
+
+ a { 
+    color: #000;
+}
+
+/* jeg styler min header */
+
+.header {
+    background-color: #fff5e9;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+/* jeg styler mine ul i min header */
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff5e9;
+}
+
+/* jeg styler mine a tags i min header  */
+
+.header ul a {
+    display: block;
+    outline: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* jeg styler mine a tags, når musen holdes over dem */
+
+.header ul a:hover {
+    background-color: #99b07e;
+}
+
+/* jeg styler mit logo */
+
+.header .logo img {
+    float: left;
+    display: block;
+    width: 15em;
+    padding: 10px 20px;
+}
+
+/* jeg styler min navbar på mobilen */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+/* jeg bygger nu min hamburger-menu */
+
+.header .menu-icon .nav-icon {
+    background: black;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* jeg vil nu animere min checked menu knap og min navbar */
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 600px;
+}
+
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 5px;
+    
+}
+/* jeg skujler mine submenuer*/
+
+
+.header .submenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #99b07e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .submenu li a:hover {
+   background-color: #708359;
+}
+
+/* Styling for undermenu punkter */
+.header .submenu li {
+    float: none; /* For at undgå, at de flugter vandret med de primære menu punkter */
+    margin-top: 0.5rem;
+}
+
+/* Viser undermenuer, når det tilsvarende primære menu punkt er i hover-tilstand */
+.header .menu > li:hover .submenu {
+    display: block;
+}
+
+
+/* jeg styler nu mit indhold til siden i min main */
+
+main {
+    background-color: #fff5e9;
+    color: #000;
+    padding-top:7rem;
+    
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+
+    text-decoration: underline;
+    font-size: 16px;
+    color: #8a476b;
+}
+
+.overste-tekst {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
+    
+}
+
+.overste-tekst p {
+    font-size: 12px;
+    width: 15rem;
+}
+
+.adventskalender {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    padding-top: 2rem;
+    color: #8a476b;
+    width: 100%;
+}
+
+
+.billede-adventskalender img {
+    width: 100%;
+}
+
+.tekst-adventskalender {
+    width: 20rem;
+    
+}
+
+.tekst-adventskalender p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+.adventskalender-teaser {
+    background-color: #8a476b;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.adventskalender-link  {
+    padding-top: 3rem;
+    background-color: #8a476b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.adventskalender-link a {
+    color: #fff5e9;    
+    text-decoration: none;
+    width: 15rem;
+}
+
+.adventskalender-link a:hover {
+    color: #8a476b;
+    background-color: #fff5e9;
+}
+
+.adventskalender-teaser img {
+    width: 18rem;
+    margin-top: 2rem;
+}
+
+
+.blaa-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.blaa-logo img {
+    width: 5rem;
+    margin: 1rem;
+}
+
+/* jeg styler nu min footer */
+
+footer {
+    background-color: #44447a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer img {
+    width: 15rem;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    color: #fff5e9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #fff5e9;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff5e9;
+}
+
+/* jeg ændre min a tags ved hover */
+
+footer a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+.socialemedier {
+    margin-bottom: 2rem;
+}
+
+
+
+
+/* jeg styler nu til tablet størrelse, i liggende position */
+
+@media (min-width:768px) {
+
+.overste-tekst p {
+    width: 20rem;
+}
+
+.adventskalender {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+.billede-adventskalender img {
+    width: 15rem;
+   
+}
+
+.adventskalender-teaser {
+    display: flex;
+    flex-direction: row;
+}
+
+.adventskalender-link a {
+    width: 22rem;
+    text-align: center;
+}
+
+.advents-daase1 img {
+    width: 25rem;
+}
+
+
+}
+
+
+
+/* jeg styler nu min css til en lille computer */
+
+@media (min-width:1024px) {
+
+/* jeg styler min navbar,så den passser til min computerskærm */
+
+.header li {
+    float: left;
+}
+
+.header li a {
+    padding: 20px 30px;
+    margin-top: 1rem;
+    outline: none;
+}
+
+.header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+}
+
+.menu-icon {
+    display: none;
+}
+/* jeg placere mere af indholdet ved siden af hinanden */
+
+.overste-tekst p {
+    width: 30rem;
+    font-size: 16px;
+}
+
+.adventskalender {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+
+.adventskalender img {
+    width: 20rem;
+}
+
+
+
+.advents-daase1 img {
+    width: 30rem;
+}
+
+
+ /* jeg styler nu min footer så den passer til en computerskærm */
+
+
+ .footer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+
+
+.aabningstider, .kontakt, .socialemedier {
+    flex: 1;
+    margin: 2rem;
+}
+
+footer h2 {
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+ .footer p, .footer a {
+font-size: 12px; }
+
+}
+
+
+
+/* jeg styler nu til en stor computerskærm */
+
+@media (min-width:1440px)  {
+
+    .overste-tekst p {
+        font-size: 16px;
+        width: 40rem;
+    }
+
+ h1 {
+    font-size: 16px;
+ }
+
+.adventskalender img {
+    width: 25rem;
+    margin-right: 10rem;
+}
+.tekst-adventskalender{
+    margin-left: 15rem;
+}
+
+.tekst-adventskalender p {
+    font-size: 14px;
+}
+
+.advents-daase1 img {
+    width: 40rem;
+}
+
+}
+
+

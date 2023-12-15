@@ -1,0 +1,582 @@
+/* jeg starter med at nulstille mit css dokumnet, i forhold til evt. browser indstilliner */
+
+/* jeg starter med at style til mobil enhed, der er stående position */
+/* min  minimum witdh er 320 px  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #fff5e9;
+    font-size: 14px;
+}
+
+/* jeg styler mine links der er i navbaren */
+
+ a { 
+    color: #000;
+}
+
+/* jeg styler min header */
+
+.header {
+    background-color: #fff5e9;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+/* jeg styler mine ul i min header */
+
+.header ul {
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff5e9;
+}
+
+/* jeg styler mine a tags i min header  */
+
+.header ul a {
+    display: block;
+    outline: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+}
+
+/* jeg styler mine a tags, når musen holdes over dem */
+
+.header ul a:hover {
+    background-color: #99b07e;
+}
+
+/* jeg styler mit logo */
+
+.header .logo img {
+    float: left;
+    display: block;
+    width: 15em;
+    padding: 10px 20px;
+}
+
+/* jeg styler min navbar på mobilen */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+    padding: 40px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+
+/* jeg bygger nu min hamburger-menu */
+
+.header .menu-icon .nav-icon {
+    background: black;
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before{
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after {
+    background: black;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    transition: all 0.2s ease-out;
+}
+
+.header .menu-btn {
+    display: none;
+}
+
+/* jeg vil nu animere min checked menu knap og min navbar */
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 600px;
+}
+
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background-color: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 5px;
+    
+}
+/* jeg skujler mine submenuer*/
+
+
+.header .submenu {
+    display: none;
+    position: relative;
+    top: 100%;
+    left: 0;
+    background-color: #99b07e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .submenu li a:hover {
+   background-color: #708359;
+}
+
+/* Styling for undermenu punkter */
+.header .submenu li {
+    float: none; /* For at undgå, at de flugter vandret med de primære menu punkter */
+    margin-top: 0.5rem;
+}
+
+/* Viser undermenuer, når det tilsvarende primære menu punkt er i hover-tilstand */
+.header .menu > li:hover .submenu {
+    display: block;
+}
+
+
+
+/* jeg styler nu mit indhold til siden i min main */
+
+main {
+    background-color: #fff5e9;
+    color: #000;
+    padding-top:7rem;
+    
+}
+
+.forste-afsnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    
+}
+
+.forste-afsnit p {
+    width: 20rem;
+    margin-bottom: 1rem;
+    
+}
+
+.forste-afsnit img {
+    width: 20rem;
+    padding: 1rem;
+}
+
+/* jeg styler nu mit afsnit om min første øl, pilsner  */
+
+.pilsner-info {
+    background-color: #99b07e;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.pilsner h1 {
+    background-color: #99b07e;
+    color: #fff5e9;
+}
+
+.pilsner img {
+    width: 20rem;
+}
+
+
+h1 {
+    font-size: 16px;
+    text-decoration: underline;
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+}
+
+.pilsner p {
+    width: 15rem;
+    
+}
+
+.pilsner-figur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pilsner-figur img {
+    width: 5rem;
+    padding: 1rem;
+}
+
+
+
+/* jeg styler nu sectionen med min sour */
+.sour-info {
+    background-color: #dc9972;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.sour img {
+    width: 20rem;
+}
+
+.sour h1 {
+    background-color: #dc9972;
+    color: #fff5e9;
+}
+
+.billede-sour2 {
+    display: none;
+}
+
+.sour p {
+    width: 15rem;
+    
+}
+
+.sour-figur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sour-figur img {
+    width: 5rem;
+    padding: 1rem;
+}
+
+
+/* jeg styler min sektion til IPA */
+
+.ipa-info {
+    background-color: #689cd1;
+    color: #fff5e9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+
+.ipa h1 {
+    background-color: #689cd1;
+    color: #fff5e9;
+}
+
+.ipa img {
+    width: 20rem;
+}
+
+.ipa p {
+    width: 15rem;
+    
+}
+
+.ipa-figur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ipa-figur img {
+    width: 5rem;
+    padding: 1rem;
+}
+
+/* jeg styler billedet med dåserne */
+
+
+.billede {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.billede img {
+    width: 10rem;
+    margin: 1rem;
+}
+
+
+/* jeg styler nu min footer */
+
+footer {
+    background-color: #44447a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+footer img {
+    width: 15rem;
+    margin-top: 2rem;
+}
+
+footer h2 {
+    color: #fff5e9;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 100;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #fff5e9;
+    font-size: 12px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #fff5e9;
+}
+
+/* jeg ændre min a tags ved hover */
+
+footer a:hover {
+    background-color: #fff5e9;
+    color: #44447a;
+}
+
+.socialemedier {
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+/* jeg styler nu til tablet størrelse, i liggende position */
+
+@media (min-width:768px) {
+
+    .forste-afsnit p {
+        font-size: 14px;
+        width: 50%;
+    }
+
+    .forste-afsnit img {
+        width: 25rem;
+    }
+
+    .pilsner p {
+        font-size: 14px;
+        width: 30rem;
+    }
+
+    .sour p {
+        font-size: 14px;
+        width: 30rem;
+       
+    }
+
+    .ipa p {
+        font-size: 14px;
+        width: 30rem;
+    }
+
+
+  
+
+}
+
+
+
+/* jeg styler nu min css til en lille computer */
+
+@media (min-width:1024px) {
+
+    /* jeg styler min navbar,så den passser til min computerskærm */
+    
+        .header li {
+            float: left;
+        }
+    
+        .header li a {
+            padding: 20px 30px;
+            margin-top: 1rem;
+            outline: none;
+        }
+    
+        .header .menu {
+            clear: none;
+            float: right;
+            max-height: none;
+        }
+    
+        .menu-icon {
+            display: none;
+        }
+
+
+        /* jeg styler mit indhold, så det passer til en computerskærm, 
+        hvor flere ting bliver placeret ved siden af hinanden */
+
+        .forste-afsnit {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+        .pilsner-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        .pilsner-info p {
+            width: 20rem;
+            margin-left: 10rem;
+        }
+
+        .sour-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sour-info p {
+            width: 20rem;
+            margin-right: 10rem;
+        }
+
+        .billede-sour1 {
+            display: none;
+        }
+
+        .billede-sour2 {
+            display: flex;
+        }
+
+        .ipa-info {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .ipa-info p {
+            width: 20rem;
+            margin-left: 10rem;
+        }
+
+        .ipa-info img {
+            margin-top: 2rem;
+        }
+
+         /* jeg styler nu min footer så den passer til en computerskærm */
+
+
+        .footer {
+        display: flex;
+        justify-content: space-between;
+        justify-content: space-around;
+        }
+
+
+         .aabningstider, .kontakt, .socialemedier {
+        flex: 1;
+        margin: 2rem;
+         }
+
+         footer h2 {
+        margin-bottom: 1rem;
+        margin-top: 0;
+         }
+
+        .footer p, .footer a {
+        font-size: 12px; }
+    
+}
+
+/* jeg styler nu til en stor computerskærm */
+
+@media (min-width:1440px) {
+
+    .forste-afsnit p {
+        font-size: 16px;
+    }
+
+    .forste-afsnit img {
+        width: 35rem;
+    }
+
+    .pilsner-info p {
+        font-size: 14px;
+    }
+
+    .pilsner-info img {
+        width: 30rem;
+        
+    }
+
+    .sour-info p {
+        font-size: 14px;
+    }
+
+    .sour-info img {
+        width: 25rem;
+        
+    }
+  
+
+    .ipa-info p {
+        font-size: 14px;
+    }
+
+    .ipa-info img {
+        width: 25rem;
+        margin-top: 2rem;
+        
+    }
+
+    
+
+}
