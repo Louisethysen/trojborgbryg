@@ -1,0 +1,169 @@
+<!-- jeg starter med at anvende bruge DOCTYPE og meta tags i min head, disse ændre sig fra side til side -->
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Trøjborgbryg, mikrobryggeri, alkoholfriøl, aarhus, pilsner, sour, ipa">
+    <meta name="description" content="Denne side fortæller om trøjborgbrygs udvalg af alkoholfriøl">
+    <title> Trøjborgbryg </title>
+     <!-- Link til favicon -->
+     <link rel="shortcut icon" href="billeder/favicon.webp">
+    <!-- link til stylesheet -->
+    <link rel="stylesheet" href="css/style-udvalg.css">
+</head>
+
+<body>
+    
+  <!-- jeg starter med at lavet min header, hvori min navbar er  -->
+  <header class="header">
+    <nav>
+            <a class="logo" href="index.html"> <img class="logo" src="billeder/logo.webp" alt="logo til trøjborgbryg"></a> 
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+          <!-- laver en nav med en ul og indsætter menupunkter og submenuer 
+        samt indsætter links til de forskelige sider-->
+            <ul class="menu">
+                <li> <a href="vores-udvalg.html">Vores udvalg</a> </li>
+
+                <li> <a href="arrangementer.html">Arrangementer</a>
+                    <ul class="submenu">
+                        <li><a href="olsmagning.html">Ølsmagning</a></li>
+                        <li> <a href="rundvisning.html">Rundvisning</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="vores-historie.html">Vores historie</a></li>
+
+                <li><a href="jul.html">Jul</a>
+                    <ul class="submenu">
+                        <li><a href="julebryg.html">Julebryg</a></li>
+                        <li><a href="adventskalender.html">Adventskalender</a></li>
+                        <li><a href="julebanko.html">Julebanko</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="community.html">Community</a>
+                    <ul class="submenu">
+                        <li><a href="lobeklub.html">Løbeklub</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </nav>  
+     
+</header>
+
+<!-- efter min header, vil jeg nu indsætte mit main afsnit, som er alt indholdet på siden -->
+<main>
+    <section class="forste-afsnit"> 
+        <p>Vi har gennem tiden udviklet tre alkoholfri øl.
+            Nyd dem derhjemme, til fester eller kom ned og smag dem på bryggeriet. 
+            De indeholder 0% alkohol - men 100% smag</p>
+        <img src="billeder/udvalg-daaser.webp" alt="Billede af de tre øl varianter fra Trøjborgbryg">
+        <p>Vores udvalg består af en “helt almindelig” pilsner, en frugtig ipa og en frisk sour. Så mon ikke der er en der falder i din smag?</p>
+    </section>
+
+    <!-- jeg indsætter min sektion til min pilsner, jeg indsætter dem i en div
+    for at jeg kan brug flex til at placere dem ved siden af hinanden  -->
+
+    <article class="pilsner">
+        <h1>PILSNER</h1>
+
+        <section class="pilsner-info">
+            <div class="billede-pilsner">
+                <img src="billeder/pilsner.webp" alt="Billede af pilsner fra Trøjborgbryg">
+            </div>
+
+            <div class="tekst-pilsner">
+                <p>Alkoholfri pilsner er en forfriskende ølvariant, der leverer den karakteristiske smag og aroma af traditionel pilsner. </p>
+                <br><p>Denne øl er skabt med omhu for at bevare den velkendte bitterhed og lette maltsmag, som kendetegner pilsnerstilen.</p>
+                <br><p>Med en gylden farve og en klar konsistens byder denne pilsner på en behagelig oplevelse for dem, der foretrækker et alkoholfri alternativ uden at gå på kompromis med den autentiske pilsnersmag. </p>
+             </div>
+        </section>
+    </article>
+
+     <div class="pilsner-figur"><img  src="billeder/pilsner-figur.webp" alt="Grafisk figur i grøn"></div>
+
+     <!-- jeg laver en sektion til sour -->
+     <section class="sour">
+        <h1>SOUR</h1>
+
+        <article class="sour-info">
+            <div class="billede-sour1">
+                <img src="billeder/sour.webp" alt="Billede af sour fra Trøjborgbryg">
+             </div>
+
+            <div class="tekst-sour">
+                 <p>Denne sour med passionsfrugt er en forfriskende og festlig drik. </p>
+                <br> <p>Den gyldne væske kombinerer perfekt syrlighed og tropisk sødme med en frugtig aroma, der vækker sanserne. </p>
+                <br> <p>Passionens intense og eksotiske noter giver en unik smagsoplevelse, og den alkoholfri variant gør denne drik til et ideelt valg for alle, der ønsker at nyde en spændende smagsoplevelse uden alkoholens virkning. </p>
+                <br> <p>Perfekt til at sætte kulør på enhver lejlighed.</p>
+            </div>
+
+            <div class="billede-sour2">
+            <img src="billeder/sour.webp" alt="Billede af sour fra Trøjborgbryg">
+            </div>
+        </article>
+     </section>
+
+     <div class="sour-figur"><img class="sour-figur" src="billeder/sour-figur.webp" alt="Grafisk figur i orange"></div>
+
+     <!-- jeg laver en sektion til IPA -->
+
+     <article class="ipa">
+        <h1>IPA</h1>
+
+
+        <section class="ipa-info">
+            <div class="billede-ipa">
+                <img src="billeder/ipa.webp" alt="Billede af ipa fra Trøjborgbryg">
+             </div>
+
+            <div class="tekst-ipa">
+                <p>Denne IPA er en smagfuld og aromatisk øl, der bevarer alle de karakteristiske træk ved en traditionel IPA. </p>
+                <br> <p>Den gyldne væske emmer af friske humle- og citrusnoter, der skaber en forfriskende duft og smag. </p>
+                <br> <p>Med en velafbalanceret bitterhed og komplekse maltnoter giver denne alkoholfrie variant dig mulighed for at opleve den intense IPA-smag uden alkoholens virkning. </p>
+                <br> <p>En perfekt løsning for dem, der ønsker at nyde den udsøgte smag af en IPA, uden bekymring for alkoholens påvirkning.</p>
+            </div>
+        </section>
+     </article>
+
+     <div class="ipa-figur" ><img src="billeder/ipa-figur.webp" alt="Grafisk figur i blå"></div>
+     
+
+    <div class="billede"><img  src="billeder/olsmagning2 .webp" alt=""></div>
+</main>
+
+<!-- efter min main, indsætter jeg nu min footer, som er placeret nederst på siden -->
+
+
+<footer>
+
+    <img src="billeder/logo2.webp" alt="Logo til trøjborgbryg">
+
+      <div class="footer">
+          <div class="aabningstider">
+              <h2>Åbningstider </h2>
+              <p>Hverdage: 15 - 22</p>
+              <p>Weekender: 12 - 24</p>
+           </div>
+
+          <div class="kontakt">
+              <h2>Kontakt</h2>
+              <a href="mailto:Trøjborgbryg@gmail.com">Mail: Trøjborgbryg@gmail.com</a>
+              <p>Tlf: +45 34 57 69 61 </p>
+          </div>
+
+          <div class="socialemedier">
+              <h2>Sociale medier</h2>
+              <a href="#">Instagram</a>
+              <br>
+              <a href="#">Facebook</a>
+          </div>
+      </div>
+</footer>
+
+
+</body>
