@@ -1,0 +1,193 @@
+<!-- jeg starter med at anvende bruge DOCTYPE og meta tags i min head, disse ændre sig fra side til side -->
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Trøjborgbryg, mikrobryggeri, arrangementer, alkoholfriøl, aarhus">
+    <meta name="description" content="Denne hjemmesider fortæller om mikrobyrggerriet Trøjborbryg, deres udvalg og hvad de ellers tilbyder ">
+    <title> Trøjborgbryg </title>
+    <!-- Link til favicon -->
+    <link rel="shortcut icon" href="billeder/favicon.webp">
+    <!-- link til stylesheet -->
+    <link rel="stylesheet" href="css/style-forside.css">
+</head>
+
+<body>
+
+    <!-- jeg starter med at lavet min header, hvori min navbar er  -->
+    <header class="header">
+        <nav>
+                <a class="logo" href="index.html"> <img class="logo" src="billeder/logo.webp" alt="logo til trøjborgbryg"></a> 
+                <input class="menu-btn" type="checkbox" id="menu-btn">
+                <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+              <!-- laver en nav med en ul og indsætter menupunkter og submenuer 
+            samt indsætter links til de forskelige sider-->
+                <ul class="menu">
+                    <li> <a href="vores-udvalg.html">Vores udvalg</a> </li>
+
+                    <li> <a href="arrangementer.html">Arrangementer</a>
+                        <ul class="submenu">
+                            <li><a href="olsmagning.html">Ølsmagning</a></li>
+                            <li> <a href="rundvisning.html">Rundvisning</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="vores-historie.html">Vores historie</a></li>
+
+                    <li><a href="jul.html">Jul</a>
+                        <ul class="submenu">
+                            <li><a href="julebryg.html">Julebryg</a></li>
+                            <li><a href="adventskalender.html">Adventskalender</a></li>
+                            <li><a href="julebanko.html">Julebanko</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="community.html">Community</a>
+                        <ul class="submenu">
+                            <li><a href="lobeklub.html">Løbeklub</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </nav>  
+         
+    </header>
+
+    <!-- efter min header, vil jeg nu indsætte mit main afsnit, som er alt indholdet på siden -->
+
+    <main>
+
+        <!-- jeg starter med at indsætte det første afsnit  -->
+        <div class="overste-tekst">
+            <p>Hos Trøjborgbryg er vi mere end bare øl, 
+            og vi også mere end alkoholfri øl. 
+            Vi er et fællesskab, der går op i samvær, sundhed og kvalitet. </p>  
+        </div>
+        <section class="teaser-udvalg">
+            <div class="billede-udvalg">
+                <img src="billeder/vores-udvalg.webp" alt="billede af dåser fra Trøjbrogbryg">
+            </div>
+
+            <div class="tekst-udvalg">
+                <a href="vores-udvalg.html"> <h1>VORES UDVALG</h1></a>
+                <p>Vores udvalg består af tre akoholfri øl. 
+                En pilsner, en ipa og en sour, og derudover har vi i år også brygget en julebryg.</p>
+                <a href="vores-udvalg.html">Læs mere om vores udvalg her.</a> 
+            </div>
+            
+        </section>
+
+            <!-- jeg indsætter nu mit andet afsnit -->
+
+        <section class="teaser-historie">
+            <div class="billede-historie1">
+                <img src="billeder/logo-troj.webp" alt="billede af grafisk logo til trøjborgbryg i flere farver ">
+            </div>
+
+            <div class="tekst-historie">
+                 <a href="vores-historie.html"><h1>VORES HISTORIE</h1></a>
+                <p>Vi startede som et hobby projekt, 
+                og har siden vokset os større. 
+                Vi holder nu til i baggård til
+                Tordenskjoldsgade i Aarhus. </p>
+                <p>Vi har en passion om at skabe
+                fokus om nydelsen af alkoholfri øl.</p>
+            
+                <a href="vores-historie.html">Læs mere om vores historie, vores mål og drømme her. </a>
+            </div>
+
+            <div class="billede-historie2">
+                <img src="billeder/logo-troj.webp" alt="billede af grafisk logo til trøjborgbryg i flere farver ">
+            </div>
+        </section>
+
+
+        <!-- jeg laver nu mit næste afsnit med ølsmagning og rundvsning, jeg indsætter det i to div, 
+        for at kunne rokere på dem alt efter størrelsen på skærmen-->
+
+        <div class="forside-arrangementer">
+
+            <section class="teaser-olsmagning">
+                <a href="olsmagning.html"> <h1>ØLSMAGNING</h1></a>
+                <a href="olsmagning.html"><img src="billeder/olsmagning2 .webp" alt="billede med øl der bliver hældt op fra Trøjborgbryg"></a>
+                <p>Kom til ølsmagning, og prøv kræfter med vores forskellige alkoholfri øl 
+                    Måske du finder en ny favorit</p>
+            </section>
+
+            <section class="teaser-rundvisning">
+                <a href="rundvisning.html"> <h1>RUNDVISNING</h1></a>
+               <a href="rundvisning.html"> <img src="billeder/rundvisning.webp" alt="Viser et billeder af øltankene på Trøjborgbryg"></a>
+                <p>Kom til rundvisning på vores bryggeri og bliv klogere på, hvordan vi brygger vores alkoholfri øl. </p>
+            </section>
+        </div>
+
+        <!-- jeg laver nu mit juleafsnit -->
+
+        <section class="teaser-jul">
+
+            <div class="jul-billede">
+                <img src="billeder/jul.webp" alt="billede med juleudvalg på trøjborgbryg">
+            </div>
+
+            <div class="tekst-jul">
+                <a href="jul.html"><h1>VORES JULEUDVALG</h1></a>
+                <p>Nu er det snart jul! og vi har fundet på en masse spændende ting. 
+                Både arrangementer her i bryggeriet, men også ting i kan nyde derhjemme.
+                </p>
+                <a href="jul.html">Læs om vores juleudvalg her.</a>
+            </div>
+        </section>
+
+        <!-- jeg laver nu mit afsnit om Community -->
+
+        <section class="teaser-community">
+            <a href="community.html"><h1>COMMUNITY</h1></a>
+            <p>Udover vores passion om at brygge 
+                den bedst smagende alkoholfri øl. 
+                Så drømmer vi også om at skabe fokus
+                på fysisk og mental sundhed. 
+                </p>
+            <p>Derfor har vi skabt Community
+               <br> - et fællesskab som kan lidt af hvert</p>
+
+            <a class="lobe-link" href="community.html">Læs om Community og vores løbeklub her.</a>
+            <img src="billeder/lobeklub-billede1.webp" alt="Billede af løbeklub hos Trøjborgbryg">
+
+        </section>
+
+    </main>
+
+    <!-- efter min main, indsætter jeg nu min footer, som er placeret nederst på siden -->
+
+
+<footer>
+
+      <img src="billeder/logo2.webp" alt="Logo til trøjborgbryg">
+
+        <div class="footer">
+            <div class="aabningstider">
+                <h2>Åbningstider </h2>
+                <p>Hverdage: 15 - 22</p>
+                <p>Weekender: 12 - 24</p>
+             </div>
+
+            <div class="kontakt">
+                <h2>Kontakt</h2>
+                <a href="mailto:Trøjborgbryg@gmail.com">Mail: Trøjborgbryg@gmail.com</a>
+                <p>Tlf: +45 34 57 69 61 </p>
+            </div>
+
+            <div class="socialemedier">
+                <h2>Sociale medier</h2>
+                <a href="#">Instagram</a>
+                <br>
+                <a href="#">Facebook</a>
+            </div>
+        </div>
+</footer>
+
+
+
+</body>
