@@ -1,0 +1,159 @@
+<!-- jeg starter med at anvende bruge DOCTYPE og meta tags i min head, disse ændre sig fra side til side -->
+
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Trøjborgbryg, mikrobryggeri, arrangementer, alkoholfriøl, aarhus, jul">
+    <meta name="description" content="Denne side fortæller om trøjborgbrygs juleudvalg ">
+    <title> Trøjborgbryg </title>
+     <!-- Link til favicon -->
+     <link rel="shortcut icon" href="billeder/favicon.webp">
+    <!-- link til stylesheet -->
+    <link rel="stylesheet" href="css/style-jul.css">
+</head>
+
+<body>
+    
+  <!-- jeg starter med at lavet min header, hvori min navbar er  -->
+  <header class="header">
+    <nav>
+            <a class="logo" href="index.html"> <img class="logo" src="billeder/logo.webp" alt="logo til trøjborgbryg"></a> 
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+
+          <!-- laver en nav med en ul og indsætter menupunkter og submenuer 
+        samt indsætter links til de forskelige sider-->
+            <ul class="menu">
+                <li> <a href="vores-udvalg.html">Vores udvalg</a> </li>
+
+                <li> <a href="arrangementer.html">Arrangementer</a>
+                    <ul class="submenu">
+                        <li><a href="olsmagning.html">Ølsmagning</a></li>
+                        <li> <a href="rundvisning.html">Rundvisning</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="vores-historie.html">Vores historie</a></li>
+
+                <li><a href="jul.html">Jul</a>
+                    <ul class="submenu">
+                        <li><a href="julebryg.html">Julebryg</a></li>
+                        <li><a href="adventskalender.html">Adventskalender</a></li>
+                        <li><a href="julebanko.html">Julebanko</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="community.html">Community</a>
+                    <ul class="submenu">
+                        <li><a href="lobeklub.html">Løbeklub</a></li>
+                    </ul>
+                </li>
+            </ul>
+    </nav>  
+     
+</header>
+
+<!-- efter min header, vil jeg nu indsætte mit main afsnit, som er alt indholdet på siden -->
+<main>
+    <div class="forste-afsnit"> 
+        <p>Nu er det snart jul! og vi har fundet på en masse spændende ting. 
+            Både arrangementer her i bryggeriet, men også ting i kan nyde derhjemme.</p>
+    </div>
+
+    <!-- jeg indsætter min sektion til min julebryg, jeg indsætter dem i en div
+    for at jeg kan brug flex til at placere dem ved siden af hinanden  -->
+
+    <section class="julebryg">
+
+        <section class="julebryg-teaser">
+            <div class="billede-julebryg">
+                <img src="billeder/julebryg.webp" alt="Billede af julebryg fra Trøjborgbryg">
+            </div>
+
+            <div class="tekst-julebryg">
+                <a href="julebryg.html"><h1>JULEBRYG</h1></a>
+                <p>I år har vi produceret en julebryg med smag af friske kirsebær.</p>
+                <p>Denne julebryg er perfekt til alle julens anledninger. </p>
+                <a href="julebryg.html">Læs mere om vores julebryg her.</a>
+             </div>
+        </section>
+    </section>
+
+     <!-- jeg laver en sektion til adventskalender  -->
+     <section class="adventskalender">
+
+        <section class="adventskalender-teaser">
+            <div class="billede-adventskalender1">
+                <img src="billeder/adventskalender.webp" alt="Billede af adventskalender fra Trøjborgbryg">
+             </div>
+
+            <div class="tekst-adventskalender">
+                <a href="adventskalender.html"><h1>ADVENTSKALENDER</h1></a>
+                 <p>I år har lavet en julekalender med fire alkoholfri øl. </p>
+                 <p>Nyd en ny hver søndag i advent og bliv klogere på alkoholfri øl.</p>
+                 <a href="adventskalender.html">Læs mere om vores adventskalender her. </a>
+            </div>
+
+            <div class="billede-adventskalender2">
+            <img src="billeder/adventskalender.webp" alt="Billede af adventskalender Trøjborgbryg">
+            </div>
+        </section>
+     </section>
+
+
+     <!-- jeg laver en sektion til julebanko -->
+
+     <section class="julebanko">
+
+        <section class="julebanko-teaser">
+            <div class="billede-julebanko">
+                <img src="billeder/julebanko.webp" alt="Billede af julebankoplader fra Trøjborgbryg">
+             </div>
+
+            <div class="tekst-julebanko">
+                <a href="julebanko.html"><h1>JULEBANKO</h1></a>
+                <p>Tag nogle venner under armen og kom til ægte julehygge hos Trøjborgbryg. </p>
+                <a href="julebanko.html">Læs mere om dette års julebanko her. </a>
+            </div>
+        </section>
+     </section>
+
+
+     <div class="banko-aften"><img src="billeder/banko-aften.webp" alt="Billede med øl og bankoplader"></div>
+
+     
+</main>
+
+<!-- efter min main, indsætter jeg nu min footer, som er placeret nederst på siden -->
+
+
+<footer>
+
+    <img src="billeder/logo2.webp" alt="Logo til trøjborgbryg">
+
+      <div class="footer">
+          <div class="aabningstider">
+              <h2>Åbningstider </h2>
+              <p>Hverdage: 15 - 22</p>
+              <p>Weekender: 12 - 24</p>
+           </div>
+
+          <div class="kontakt">
+              <h2>Kontakt</h2>
+              <a href="mailto:Trøjborgbryg@gmail.com">Mail: Trøjborgbryg@gmail.com</a>
+              <p>Tlf: +45 34 57 69 61 </p>
+          </div>
+
+          <div class="socialemedier">
+              <h2>Sociale medier</h2>
+              <a href="#">Instagram</a>
+              <br>
+              <a href="#">Facebook</a>
+          </div>
+      </div>
+</footer>
+
+
+</body>
